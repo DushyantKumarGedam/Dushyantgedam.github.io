@@ -1,104 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dushyant Kumar - Data Analyst Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font (and an elegant serif font for display) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Tech Stack Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJzLQQgUP9DkM+rXvH6A+AEPXzIeL5qFf1/9Y2T65P+gC5QGv/BfGz4d2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Define custom font utilities using Playfair Display for the main text */
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom background color to match the sage green/teal in the hero section */
+        .bg-custom-sage {
+            background-color: #C4D7D2;
+        }
+        /* Custom light cream background color for the content sections */
+        .bg-custom-cream {
+            background-color: #FAF9F6;
+        }
+        /* Custom dark sage text color for headings */
+        .text-custom-dark-sage {
+            color: #3A544F;
+        }
+        /* Smooth scrolling behavior for navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom text styles for body text in the about/projects sections */
+        .body-text {
+            color: #4b4b4b; /* Slightly darker gray for better readability */
+        }
+    </style>
 </head>
-<body>
+<body class="font-inter bg-custom-cream">
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Your Name</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- FIXED NAVIGATION BAR (Enhanced) -->
+    <header class="sticky top-0 left-0 w-full bg-custom-sage/90 backdrop-blur-sm shadow-md z-50">
+        <nav class="max-w-7xl mx-auto px-6 sm:px-12 py-4">
+            <ul class="flex justify-center space-x-6 sm:space-x-12 text-gray-800 font-medium tracking-wide">
+                <li><a href="#home" class="hover:text-custom-dark-sage transition duration-200 border-b-2 border-transparent hover:border-custom-dark-sage pb-1">Home</a></li>
+                <li><a href="" class="hover:text-custom-dark-sage transition duration-200 border-b-2 border-transparent hover:border-custom-dark-sage pb-1">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="YOUR-PROFILE-IMAGE-LINK-HERE" alt="Profile Picture" class="profile-pic">
-      <h2>Hello, I'm <span>Your Name</span></h2>
-      <p>A passionate Data Analyst turning data into insights.</p>
-    </div>
-  </section>
+    <!-- MAIN CONTENT SECTIONS -->
+    <main> 
 
-  <!-- About Section -->
-  <section id="about" class="about section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm a data analyst skilled in uncovering trends, building dashboards, and providing
-        data-driven solutions. I enjoy transforming raw data into actionable insights
-        using Python, SQL, Excel, and visualization tools.
-      </p>
-    </div>
-  </section>
+        <!-- SECTION 1: HERO -->
+        <section id="home" class="min-h-screen bg-custom-sage flex items-center justify-center p-6 sm:p-12">
+            <div class="w-full max-w-7xl flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-16 pt-16 lg:pt-0">
+                
+                <!-- LEFT SECTION: Text and Call to Action -->
+                <div class="flex flex-col space-y-6 lg:w-1/2 text-gray-800 text-center lg:text-left">
+                    
+                    <p class="text-xl sm:text-2xl font-light opacity-80 body-text">👋 Hello, I'm</p>
+                    
+                    <!-- Main Heading -->
+                    <h1 class="font-playfair font-normal text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-tight tracking-tight">
+                        Dushyant Kumar
+                    </h1>
+                    
+                    <!-- Secondary Text (Italicized) -->
+                    <p class="font-playfair italic text-2xl sm:text-3xl md:text-4xl font-light opacity-90 text-custom-dark-sage">
+                        Data Analyst & Machine Learning Enthusiast
+                    </p>
+                    
+                    <!-- Button -->
+                    <div class="pt-6 flex justify-center lg:justify-start space-x-4">
+                        <button id="email-button" class="w-40 px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-custom-dark-sage transition duration-300 shadow-lg">
+                            Email Me
+                        </button>
+                        <a href="#projects" class="w-40 px-6 py-3 border border-gray-800 text-gray-800 font-medium rounded-lg hover:bg-gray-800 hover:text-white transition duration-300 shadow-md flex items-center justify-center">
+                            View Work
+                        </a>
+                        <a href="#skills" class="w-40 px-6 py-3 border border-gray-800 text-gray-800 font-medium rounded-lg hover:bg-gray-800 hover:text-white transition duration-300 shadow-md flex items-center justify-center">
+                            Skills
+                        </a>
+                        <a href="#about" class="w-40 px-6 py-3 border border-gray-800 text-gray-800 font-medium rounded-lg hover:bg-gray-800 hover:text-white transition duration-300 shadow-md flex items-center justify-center">
+                            About Me
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- RIGHT SECTION: Image Collage -->
+                <div class="lg:w-1/2 w-full max-w-xl flex items-stretch space-x-4 h-[450px] sm:h-[550px] lg:h-[650px] pt-12">
+                    
+                    <!-- Left Stack: Two images -->
+                    <div class="flex flex-col space-y-4 w-2/5">
+                        <div class="h-1/2 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-[1.02] transform">
+                            <img src="https://placehold.co/400x400/2C5D65/E8F0EF?text=Office+View" alt="Office Buildings" 
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="h-1/2 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-[1.02] transform">
+                            <img src="https://placehold.co/400x400/C4A17B/2E4057?text=Code+Laptop" alt="Desk with Laptop and Notebook" 
+                                class="w-full h-full object-cover object-left">
+                        </div>
+                    </div>
+                    
+                    <!-- Right Image: Large Portrait -->
+                    <div class="w-3/5 rounded-xl shadow-2xl overflow-hidden transition duration-300 hover:scale-[1.01] transform">
+                        <img src="https://placehold.co/800x1200/2E7F9B/E8F0EF?text=Rahul+Arora" alt="Dushyant Kumar Portrait" 
+                            class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills section">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Python (Pandas, NumPy, Matplotlib, Seaborn)</li>
-        <li>SQL & Database Management</li>
-        <li>Power BI / Tableau</li>
-        <li>Excel & Data Cleaning</li>
-        <li>Statistical Analysis</li>
-        <li>Machine Learning Basics</li>
-      </ul>
-    </div>
-  </section>
+        <!-- SECTION 2: ABOUT ME -->
+        <section id="about" class="py-20 sm:py-28 bg-custom-cream flex items-center justify-center p-6 sm:p-12">
+            <div class="w-full max-w-7xl flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-16">
+                
+                <!-- LEFT SECTION: Image -->
+                <div class="lg:w-1/2 w-full max-w-md lg:max-w-lg order-2 lg:order-1">
+                    <div class="rounded-3xl shadow-xl overflow-hidden">
+                        <img src="https://placehold.co/800x1200/2E7F9B/E8F0EF?text=Rahul+Arora" alt="Dushyant Kumar Profile" 
+                            class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
+                <!-- RIGHT SECTION: Text -->
+                <div class="flex flex-col space-y-6 lg:w-1/2 text-center lg:text-left order-1 lg:order-2">
+                    
+                    <!-- Heading -->
+                    <h2 class="font-playfair text-custom-dark-sage text-5xl sm:text-6xl font-normal leading-tight">
+                        About Me
+                    </h2>
+                    
+                    <!-- Body Text -->
+                    <p class="text-lg leading-relaxed max-w-prose mx-auto lg:mx-0 body-text">
+                        Hey there! I'm Dushyant Kumar Gedam, an aspiring Data Analyst from Chhattisgarh, India, driven by a deep curiosity to uncover insights hidden within data and transform them into meaningful stories that inspire smarter decisions.
+                    </p>
+                    <p class="text-lg leading-relaxed max-w-prose mx-auto lg:mx-0 body-text">
+                        I began my journey as a Data Science Intern, where I gained a strong foundation in data handling, systems, and algorithms. My growing interest in research and analysis encouraged me to explore the intersection of statistics, visualization, and machine learning, helping me build well-rounded analytical skills.                    </p>
+                    <p class="text-lg leading-relaxed max-w-prose mx-auto lg:mx-0 body-text">
+                        Today, I focus on designing clear, data-driven solutions — from data collection and cleaning to visualization and dashboard creation using tools like Python, Excel, and Power BI. I’m continually expanding my expertise in database design, predictive modeling, and A/B testing to optimize performance and outcomes.                    </p>
+                    <p class="text-lg leading-relaxed max-w-prose mx-auto lg:mx-0 body-text">
+                        Let’s connect and turn your data challenges into strategic opportunities!                </div>
 
-        <div class="project-card">
-          <img src="YOUR-PROJECT-IMAGE-1" alt="Project 1">
-          <h3>Project Title 1</h3>
-          <p>Brief description of what this project is about and what tools you used.</p>
+            </div>
+        </section>
+        
+        <!-- SECTION 3: SKILLS AND SERVICES (Tech Stack Grid) -->
+        <section id="skills" class="py-20 sm:py-28 bg-gray-50/50 flex items-center justify-center p-6 sm:p-12 border-t border-b border-gray-200">
+            <div class="w-full max-w-6xl">
+                
+                <!-- Main Heading -->
+                <h2 class="font-playfair text-custom-dark-sage text-5xl sm:text-6xl font-normal leading-tight text-center mb-16">
+                    Skills & Tech Stack
+                </h2>
+                
+                <!-- Two Column Grid for Skill Categories -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    
+                    <!-- Column 1: Core Analysis & Programming -->
+                    <div class="text-center">
+                        <h3 class="font-playfair text-gray-800 text-3xl font-medium mb-8 border-b pb-4">Analysis & Programming</h3>
+                        <div class="grid grid-cols-3 gap-8">
+                            <!-- Skill Card 1: Python -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fab fa-python text-5xl text-blue-600 mb-2"></i>
+                                <span class="font-medium text-sm body-text">Python</span>
+                            </div>
+                            <!-- Skill Card 2: R -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-r-project text-5xl text-indigo-500 mb-2"></i>
+                                <span class="font-medium text-sm body-text">R Language</span>
+                            </div>
+                            <!-- Skill Card 3: SQL -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-database text-5xl text-gray-700 mb-2"></i>
+                                <span class="font-medium text-sm body-text">SQL / DB Mgt</span>
+                            </div>
+                            <!-- Skill Card 4: Machine Learning -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-brain text-5xl text-red-500 mb-2"></i>
+                                <span class="font-medium text-sm body-text">ML / Modeling</span>
+                            </div>
+                            <!-- Skill Card 5: Statistics -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-chart-line text-5xl text-green-600 mb-2"></i>
+                                <span class="font-medium text-sm body-text">Statistics</span>
+                            </div>
+                            <!-- Skill Card 6: A/B Testing -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-vial text-5xl text-yellow-600 mb-2"></i>
+                                <span class="font-medium text-sm body-text">A/B Testing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Data Visualization & Tools -->
+                    <div class="text-center">
+                        <h3 class="font-playfair text-gray-800 text-3xl font-medium mb-8 border-b pb-4">Visualisation & Tools</h3>
+                        <div class="grid grid-cols-3 gap-8">
+                            <!-- Skill Card 7: Tableau -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-table-cells-large text-5xl text-purple-600 mb-2"></i>
+                                <span class="font-medium text-sm body-text">Tableau</span>
+                            </div>
+                            <!-- Skill Card 8: Power BI -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-chart-area text-5xl text-yellow-800 mb-2"></i>
+                                <span class="font-medium text-sm body-text">Power BI</span>
+                            </div>
+                            <!-- Skill Card 9: Excel/Sheets -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-file-excel text-5xl text-emerald-600 mb-2"></i>
+                                <span class="font-medium text-sm body-text">Advanced Excel</span>
+                            </div>
+                            <!-- Skill Card 10: ETL -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-cubes text-5xl text-orange-500 mb-2"></i>
+                                <span class="font-medium text-sm body-text">ETL Pipelines</span>
+                            </div>
+                            <!-- Skill Card 11: Cloud -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-cloud text-5xl text-cyan-500 mb-2"></i>
+                                <span class="font-medium text-sm body-text">AWS / GCP</span>
+                            </div>
+                            <!-- Skill Card 12: Git -->
+                            <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                                <i class="fas fa-code-branch text-5xl text-red-700 mb-2"></i>
+                                <span class="font-medium text-sm body-text">Git/Version C.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: PROJECTS (NEW) -->
+        <section id="projects" class="py-20 sm:py-28 bg-custom-cream flex items-center justify-center p-6 sm:p-12">
+            <div class="w-full max-w-7xl">
+                
+                <!-- Main Heading -->
+                <h2 class="font-playfair text-custom-dark-sage text-5xl sm:text-6xl font-normal leading-tight text-center mb-16">
+                    Featured Projects
+                </h2>
+                
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    
+                    <!-- Project Card 1: Customer Segmentation -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <img src="https://placehold.co/600x400/D4D7CE/4A5A5C?text=Segmentation+Analysis" alt="Customer Segmentation Dashboard" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-playfair text-2xl font-semibold mb-2 text-gray-800">Customer Segmentation Model</h3>
+                            <p class="text-sm text-custom-dark-sage font-medium mb-4">#Python #KMeans #Pandas</p>
+                            <p class="body-text text-base mb-4">Developed an unsupervised learning model to segment e-commerce customers, enabling a 15% increase in targeted marketing campaign ROI.</p>
+                            <a href="#" class="text-sm font-medium text-custom-dark-sage hover:text-gray-800 transition duration-200">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Sales Forecasting -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <img src="https://placehold.co/600x400/98C1D9/293241?text=Time+Series+Forecast" alt="Time Series Forecasting Chart" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-playfair text-2xl font-semibold mb-2 text-gray-800">Advanced Sales Forecasting</h3>
+                            <p class="text-sm text-custom-dark-sage font-medium mb-4">#R #ARIMA #Forecasting</p>
+                            <p class="body-text text-base mb-4">Implemented an ARIMA model in R to predict quarterly sales with an accuracy of 92%, used for inventory planning and budget allocation.</p>
+                            <a href="#" class="text-sm font-medium text-custom-dark-sage hover:text-gray-800 transition duration-200">View Repository &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: Dashboard Creation -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <img src="https://placehold.co/600x400/EAEAEA/4b4b4b?text=Interactive+Dashboard" alt="Tableau Dashboard Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-playfair text-2xl font-semibold mb-2 text-gray-800">Executive Performance Dashboard</h3>
+                            <p class="text-sm text-custom-dark-sage font-medium mb-4">#Tableau #SQL #Visualisation</p>
+                            <p class="body-text text-base mb-4">Designed and deployed a suite of interactive Tableau dashboards to track key performance indicators for C-level executives.</p>
+                            <a href="#" class="text-sm font-medium text-custom-dark-sage hover:text-gray-800 transition duration-200">Explore Live Demo &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: CONTACT / LET'S WORK TOGETHER (Reordered and enhanced) -->
+        <section id="contact" class="py-20 sm:py-28 bg-custom-sage flex items-center justify-center p-6 sm:p-12 border-t border-gray-200">
+             <div class="w-full max-w-7xl flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-16">
+                
+                <!-- LEFT SECTION: Text and Contact Info -->
+                <div class="flex flex-col space-y-6 lg:w-1/2 text-gray-800 text-center lg:text-left">
+                    
+                    <!-- Main Heading -->
+                    <h2 class="font-playfair text-white text-5xl sm:text-6xl xl:text-7xl font-normal leading-tight tracking-tight">
+                        Let's Work Together
+                    </h2>
+                    
+                    <!-- Instructions -->
+                    <p class="text-lg pt-4 leading-relaxed max-w-prose mx-auto lg:mx-0 body-text text-gray-700">
+                        Ready to leverage your data for business growth? Reach out and let's discuss your next project!
+                    </p>
+
+                    <!-- Contact Details -->
+                    <div class="pt-2 text-xl font-medium space-y-2">
+                        <p class="text-gray-900 flex items-center justify-center lg:justify-start">
+                            <i class="fas fa-phone mr-3 text-custom-dark-sage"></i> 
+                            +91-9301281882
+                        </p>
+                        <p class="font-normal text-gray-900 flex items-center justify-center lg:justify-start">
+                            <i class="fas fa-envelope mr-3 text-custom-dark-sage"></i> 
+                            <a href="mailto:dushyantkumargedam@gmail.com" class="hover:underline">dushyantkumargedam@gmail.com</a>
+                        </p>
+                        <p class="font-normal text-gray-900 flex items-center justify-center lg:justify-start">
+                            <i class="fab fa-linkedin mr-3 text-custom-dark-sage"></i> 
+                            <a href="https://www.linkedin.com/in/dushyant-kumar-gedam-8605b1303/" class="hover:underline">linkedin.com/in/dushyant kumar gedam</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- RIGHT SECTION: Image -->
+                <div class="lg:w-1/2 w-full max-w-md lg:max-w-lg">
+                    <div class="rounded-3xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="https://placehold.co/800x500/1E3F66/C4D7D2?text=Collaborative+Data+Session" alt="Team analyzing data collaboratively" 
+                             class="w-full h-full object-cover object-center">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- FOOTER (NEW) -->
+    <footer class="bg-custom-sage/80 py-8 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 text-center text-gray-700 text-sm">
+            <p>&copy; <span id="current-year"></span> Dushyant Kumar. All rights reserved.</p>
+            <p class="mt-1">Built with <span class="text-red-600">&hearts;</span> and Tailwind CSS.</p>
         </div>
+    </footer>
 
-        <div class="project-card">
-          <img src="YOUR-PROJECT-IMAGE-2" alt="Project 2">
-          <h3>Project Title 2</h3>
-          <p>Brief description of what this project is about and what tools you used.</p>
-        </div>
 
-        <div class="project-card">
-          <img src="YOUR-PROJECT-IMAGE-3" alt="Project 3">
-          <h3>Project Title 3</h3>
-          <p>Brief description of what this project is about and what tools you used.</p>
-        </div>
+    <!-- Script to simulate the button action and set current year -->
+    <script>
+        // Set current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-      </div>
-    </div>
-  </section>
+        // Simulate email button click
+        document.getElementById('email-button').addEventListener('click', () => {
+            const messageBox = document.createElement('div');
+            messageBox.className = 'fixed top-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-xl transition-opacity duration-500 z-50';
+            messageBox.textContent = 'Email action simulated! (Goes to contact section)';
+            document.body.appendChild(messageBox);
+            
+            // Scroll to contact section
+            document.getElementById('contact').scrollIntoView();
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out for collaboration or data analysis projects!</p>
-      <a href="mailto:your-email@example.com" class="contact-btn">Get in Touch</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Your Name | Data Analyst Portfolio</p>
-  </footer>
-
+            setTimeout(() => {
+                messageBox.style.opacity = '0';
+                setTimeout(() => messageBox.remove(), 500);
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
-  
